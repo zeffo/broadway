@@ -1,16 +1,9 @@
 # broadway
 Web Technologies Project | A website that gives detailed information about Broadway shows.
 
-# Design Philosophy
 
-    - Colorful is better than colorless: the colorfulness of something contributes to the distinction amongst the parts of that something, making it marginally easier to understand how things are structured.
 
-    - There should be balance: not too dull, not too bright. Suitability under various light conditions is a must.
-
-    - Harmony is superior to dissonance: vivacious colors must complement each other.
-
-# Color Palette
-
+# Color Palette | Catppuccin Mocha
 <table>
 	<tr>
 		<th></th>
