@@ -1,0 +1,80 @@
+
+/* Palette */
+@import url("./palette.css");
+
+
+/* General */
+html, body {
+    height: 100%;
+}
+
+html body {
+    background-color: var(--ctp-mocha-crust);
+    font-family: 'Poppins';
+    font-size: 30px;
+    background-image: url("images/hadestown.jpg");
+    backdrop-filter: blur(6px);
+    margin: 0px;
+    color: var(--ctp-latte-peach)
+}
+
+body.flex-container {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    gap: 30px;
+}
+
+div.body.flex-container {
+    width: 100%;
+}
+
+/* Headers */
+
+.title {
+    font-family: 'Lobster';
+    color: var(--ctp-mocha-peach);
+    font-size: 50px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-size: 50px;
+    color: var(--ctp-mocha-text);
+}
+
+/* Navbar */
+
+div.navbar.flex-container {
+    padding-left: 20px;
+    height: 100%;
+    width: 300px;
+    color: var(--ctp-mocha-mantle);
+    background-color: var(--ctp-mocha-mantle);
+    display: flex;
+    flex-direction: column;
+}
+
+div.navbar div.nav-links a {
+    justify-content: left;
+    color: var(--ctp-mocha-yellow);
+    text-decoration: none;
+}
+
+div.navbar div.nav-links a:hover {
+    color: var(--ctp-mocha-red);
+}
+
+/* Positional Utilities */
+
+html > .text-left {
+    text-align: left;
+}
+
+html > .text-center {
+    text-align: center;
+}
+
