@@ -12,8 +12,37 @@
 
  
         <title>
-            SAMPLE
+            Broadway | Gallery
         </title>
+
+        <style>
+
+            #carousel {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #carousel > .col {
+                padding-bottom: 140px;
+            }
+
+            #carousel > .col > button {
+                margin: 30px;
+                margin-bottom: 50px;
+            }
+
+            #carousel > .col > button:hover {
+                background-color: var(--ctp-mocha-crust);
+                color: white;
+                font-weight: bold;
+            }
+
+            
+        </style>
 
     </head>
 
@@ -30,7 +59,50 @@
                 <a href="./about.html">ABOUT</a>
             </div>
         </navbar>
-        
-        THIS IS A SAMPLE PAGE!
+        <div class="container-fluid row" id="carousel">
+            <div class="col">
+                <button onclick="back()">
+                    BACK
+                </button>
+            </div>
+            <div class="col">
+                <button onclick="next()">
+                    NEXT
+                </button>
+            </div>
+            <script>
+                var static = "./static/images/";
+                var images = ['aladdin.jpg', 'cursedchild.jpg', 'frozen.jpg', 'hadestown.jpg', 'hamilton.jpg', 'lionking.jpg', 'wicked.jpg'];            
+                var cursor = 0;
+
+                function set(index) {
+                    cursor = index;
+                    let image = images[index];
+                    let carousel = document.getElementById("carousel");
+                    carousel.style.backgroundImage = `url('${static}${image}')`;
+                }
+
+                set(0); // set initial background
+
+                function next() {
+                    let idx = cursor + 1;
+                    if (idx == images.length) {
+                        set(0);
+                    } else {
+                        set(idx);
+                    }
+                }
+
+                function back() {
+                    let idx = cursor - 1;
+                    if (idx < 0) {
+                        set(images.length - 1);
+                    } else {
+                        set(idx);
+                    }
+                }
+
+            </script>
+        </div>
     </body>
 </html>

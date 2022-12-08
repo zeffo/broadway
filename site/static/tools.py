@@ -1,0 +1,1 @@
+print(__import__('os').listdir("./images/"))
