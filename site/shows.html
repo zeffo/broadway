@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <head>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Responsiveness -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- End -->
+
+ 
+        <title>
+            Broadway | Shows
+        </title>
+
+        <style>
+            #shows {
+                padding: 50px 50px;
+                gap: 50px;
+            }
+
+            #shows > card {
+                height: 300px;
+                width: 300px;
+                background-color: var(--ctp-mocha-crust);
+                color: var(--ctp-mocha-);             
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                border-radius: 20px;
+                text-align: center;
+                justify-content: space-between;
+            }
+
+            #shows > card:hover {
+                background-color: var(--ctp-mocha-blue);
+                color: var(--ctp-mocha-crust);
+                font-weight: bold;
+                border: 5px solid var(--ctp-mocha-crust);
+            }
+
+            #shows > card > img {
+                border-radius: 10px;
+                height: 250px;
+                object-fit: cover;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <navbar>
+            <h1>
+                <a href="./index.html" class="title">Broadway&nbsp;</a>
+            </h1>
+
+            <div class="nav-links">
+                <a href="./shows.html" class="active">SHOWS</a>
+                <a href="./gallery.html">GALLERY</a>
+                <a href="./awards.html">AWARDS</a>
+                <a href="./about.html">ABOUT</a>
+            </div>
+        </navbar>
+
+        <div class="container-fluid row flex-wrap slide-in justify-center" id="shows">
+            <script type="text/javascript">
+                var static = "./static/images/"         // Path to card image directory
+                var shows = [   // Array of Title and filename
+                    ["Hadestown", "hadestown.jpg"],
+                    ["The Lion King", "lionking.jpg"],
+                    ["Frozen", "frozen.jpg"],
+                    ["Aladdin", "aladdin.jpg"],
+                    ["The Cursed Child", "cursedchild.jpg"],
+                    ["Hamilton", "hamilton.jpg"],
+                    ["Wicked", "wicked.jpg"]
+                ]
+
+                for (let i=0; i<shows.length; i++) {
+                    let show = shows[i];
+                    let parent = document.getElementById("shows");
+                    let button = document.createElement("card");    // Create card element for every item in the array
+                    let text = document.createTextNode(show[0]);
+                    let image = document.createElement("img");
+                    image.setAttribute("src", static+show[1]);
+                    button.appendChild(image);
+                    button.appendChild(text);
+                    parent.appendChild(button);
+                }
+
+            </script>
+        </div>
+    </body>
+</html>

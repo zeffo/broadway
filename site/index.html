@@ -12,26 +12,79 @@
 
  
         <title>
-            Broadway!
+            Broadway | Home
         </title>
+
+        <style>
+            
+            #content {
+                padding: 0 0 0 60px;
+                height: 80vh;
+                gap: 50px;
+            }
+
+            .col {
+                float: left;
+                width: 50%;
+            }
+
+            #home-image {
+                max-width: 100%; 
+                height: auto;
+                object-fit: contain;
+                border-radius: 10px 0 0 10px;
+                border: 3px solid var(--ctp-mocha-crust);
+                border-right: 0;
+            }
+
+            button {
+                background-color: var(--ctp-mocha-blue);
+                color: var(--ctp-mocha-crust);
+            }
+
+        </style>
 
     </head>
 
-    <body class="flex-container">
-        <div class="navbar flex-container">
-            <h1 class="title">
-                Broadway&nbsp;
+    <body>
+
+        <navbar>
+            <h1>
+                <a href="./index.html" class="title glow">Broadway&nbsp;</a>
             </h1>
+
             <div class="nav-links">
-                <a href="./shows"> SHOWS </a> <br>
-                <a href="./gallery"> GALLERY </a> <br>
+                <a href="./shows.html">SHOWS</a>
+                <a href="./gallery.html">GALLERY</a>
+                <a href="./awards.html">AWARDS</a>
+                <a href="./about.html">ABOUT</a>
             </div>
-        </div>
-        <div class="body flex-container">
-            <div>
-                <h2 class="text-center">
-                </h2>
+        </navbar>
+
+        <div class="container-fluid row fade-in" id="content">
+            <div class="col">
+                <br>
+                <h1>
+                    Your Favorite Stories <br>
+                    brought to stage.
+                </h1>
+                Featuring:
+                <ul>
+                    <li>Frozen</li>
+                    <li>The Lion King</li>
+                    <li>Hamilton</li>
+                    <li>Hadestown</li>
+                    <li>Aladdin</li>
+                </ul>
+                <a href="./shows.html">
+                    <button>
+                        See More
+                    </button>
+                </a>
             </div>
-        </div>    
+            <div class="col justify-center">
+                <img src="./static/images/frozen.jpg" id="home-image"> 
+            </div>
+        </div>        
     </body>
 </html>
