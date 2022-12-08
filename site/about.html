@@ -12,8 +12,31 @@
 
  
         <title>
-            SAMPLE
+            Broadway | About
         </title>
+
+        <style>
+            html, body {
+                overflow: visible;
+            }
+
+            .row {
+                padding: 50px;
+                gap: 50px;
+                color: var(--ctp-mocha-text);
+                align-items: center;
+            }
+
+            .col {
+                float: left;
+                width: 50%;
+            }
+
+            .col > img {
+                max-height: 300px;
+            }
+
+        </style>
 
     </head>
 
@@ -31,6 +54,43 @@
             </div>
         </navbar>
         
-        THIS IS A SAMPLE PAGE!
+        <div class="container-fluid row fade-in">
+
+            <div class="col">
+                Broadway theatre, or Broadway, are the theatrical performances presented in the 41 professional theatres, 
+                each with 500 or more seats, located in the Theater District and the Lincoln Center along Broadway, in Midtown Manhattan, New York City. 
+                Broadway and London's West End together represent the highest commercial level of live theater in the English-speaking world.
+            </div>
+            <div class="col">
+                <img src="./static/misc/ancient.jpg">
+            </div>
+        </div>
+
+        <div class="container-fluid row fade-in">
+            <div class="col">
+                <img src="./static/misc/blackcrook.jpg">
+            </div>
+            <div class="col">
+                The first theatre piece that conforms to the modern conception of a musical, adding dance and original music that helped to tell the story, 
+                is considered to be The Black Crook, which premiered in New York on September 12, 1866. 
+                The production was five-and-a-half hours long, but despite its length, it ran for a record-breaking 474 performances.
+            </div>
+        </div>
+
+        <div class="container-fluid row fade-in">
+
+            <div class="col">
+                Due to COVID-19 pandemic in the United States, Broadway theaters closed on March 12, 2020, 
+                shuttering 16 shows that were playing or were in the process of opening. 
+                Springsteen on Broadway became the first full-length show to resume performances, 
+                opening on June 26, 2021, to 1,721 vaccinated patrons at the St. James Theatre.
+            </div>
+            <div class="col">
+                <img src="./static/misc/theatres.jpg">
+            </div>
+        </div>
+
+
+
     </body>
 </html>

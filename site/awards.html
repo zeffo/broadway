@@ -12,8 +12,31 @@
 
  
         <title>
-            SAMPLE
+            Broadway | Awards
         </title>
+
+        <style>
+            #awards {
+                padding: 50px;
+                gap: 30px;
+            }
+
+            award {
+                height: 400px;
+                width: 400px;
+                padding: 10px 10px 0 10px;
+                border-radius: 10px;
+                border: 4px solid var(--ctp-mocha-crust);
+                text-align: center;
+                background-color: var(--ctp-mocha-crust);
+                animation: animate-fade-in 3s;
+            }
+
+            award:hover {
+                background-color: transparent;
+            }
+
+        </style>
 
     </head>
 
@@ -30,6 +53,39 @@
             </div>
         </navbar>
         
-        THIS IS A SAMPLE PAGE!
+        <p class="text-center">
+            The Antoinette Perry Award for Excellence in Broadway Theatre,
+            more commonly known as the Tony Award, recognizes excellence in live Broadway theatre. 
+        </p>
+
+        <div class="container-fluid row" id="awards">
+            <br>
+            <award>
+                <h1>
+                    Hamilton
+                </h1>
+                <p>
+                    The most Tony nominations ever received by a single production was the musical Hamilton (2016) with 16 nominations in 13 categories.
+                </p>
+            </award>
+
+            <award>
+                <h1>The Producers</h1>
+                <p>The most Tony Awards ever received by a single production was the musical The Producers (2001) with 12 awards.</p>
+            </award>
+
+            <award>
+                <h1>The Coast of Utopia</h1>
+                <p>The most Tonys ever received by a non-musical play was The Coast of Utopia (2007) with 7 awards.</p>
+            </award>
+
+            <award>
+                <h1>Harold Prince</h1>
+                <p>has received 21 Tony Awards; eight for Best Direction of a Musical, 
+                    eight for Best Musical, two for Best Producer of a Musical, 
+                    and three special Tony Awards.
+                </p>
+            </award>
+        </div>
     </body>
 </html>
