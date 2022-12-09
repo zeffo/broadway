@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <head>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Responsiveness -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- End -->
+
+ 
+        <title>
+            Broadway | Contact
+        </title>
+
+        <style>
+            form {
+                width: 80%;
+                padding: 30px;
+                gap: 30px;
+                justify-content: center;
+            }
+
+            form > input {
+                
+                border-radius: 10px;
+                color: var(--ctp-mocha-text);
+                background-color: var(--ctp-mocha-crust);
+                font-family: 'Poppins';
+                font-size: 30px;
+                padding: 0 10px;
+            }
+
+            #query {
+                height: 250px;
+            }
+
+            #submit {
+                background-color: var(--ctp-mocha-crust);
+                color: var(--ctp-mocha-red);
+            }
+
+            #submit:hover {
+                color: var(--ctp-mocha-crust);
+                background-color: var(--ctp-mocha-red);
+                transform: scale(1);
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <navbar>
+            <h1>
+                <a href="./index.html" class="title">Broadway&nbsp;</a>
+            </h1>
+
+            <div class="nav-links">
+                <a href="./shows.html">SHOWS</a>
+                <a href="./gallery.html">GALLERY</a>
+                <a href="./awards.html">AWARDS</a>
+                <a href="./about.html">ABOUT</a>
+                <a href="./contact.html" class="active">CONTACT</a>
+            </div>
+
+        </navbar>
+
+        <h1 class="text-center">
+            Got a question?
+        </h1>
+        
+        <div class="container-fluid row justify-center">
+            <form class="container-fluid col">
+                <input type="email" placeholder="Enter your email address:" class="slide-in"/>
+                <input id="query" type="text" placeholder="Enter your query:" class="slide-in"/>
+                <button type="submit" id="submit" class="slide-in">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
