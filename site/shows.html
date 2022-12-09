@@ -21,11 +21,12 @@
                 gap: 50px;
             }
 
+
+
             #shows > card {
                 height: 300px;
                 width: 300px;
-                background-color: var(--ctp-mocha-crust);
-                color: var(--ctp-mocha-);             
+                background-color: var(--ctp-mocha-crust);          
                 display: flex;
                 flex-direction: column;
                 padding: 10px;
@@ -36,15 +37,25 @@
 
             #shows > card:hover {
                 background-color: var(--ctp-mocha-blue);
-                color: var(--ctp-mocha-crust);
-                font-weight: bold;
                 border: 5px solid var(--ctp-mocha-crust);
             }
 
-            #shows > card > img {
+            #shows > card:hover > a {
+                color: var(--ctp-mocha-crust);
+                font-weight: bold;
+                text-underline-offset: 3px;
+                text-decoration: underline;
+            }
+
+            #shows > card > a > img {
                 border-radius: 10px;
                 height: 250px;
                 object-fit: cover;
+            }
+
+            #shows > card > a {
+                text-decoration: none;
+                color: var(--ctp-mocha-blue);
             }
 
         </style>
@@ -69,25 +80,34 @@
             <script type="text/javascript">
                 var static = "./static/images/"         // Path to card image directory
                 var shows = [   // Array of Title and filename
-                    ["Hadestown", "hadestown.jpg"],
-                    ["The Lion King", "lionking.jpg"],
-                    ["Frozen", "frozen.jpg"],
-                    ["Aladdin", "aladdin.jpg"],
-                    ["The Cursed Child", "cursedchild.jpg"],
-                    ["Hamilton", "hamilton.jpg"],
-                    ["Wicked", "wicked.jpg"]
+                    ["Hadestown", "hadestown.jpg", "https://www.hadestown.com"],
+                    ["The Lion King", "lionking.jpg", "https://lionking.com"],
+                    ["Frozen", "frozen.jpg", "https://frozenthemusical.com"],
+                    ["Aladdin", "aladdin.jpg", "https://aladdinthemusical.com"],
+                    ["The Cursed Child", "cursedchild.jpg", "https://www.harrypottertheplay.com"],
+                    ["Hamilton", "hamilton.jpg", "https://hamiltonthemusical.com"],
+                    ["Wicked", "wicked.jpg", "https://wickedthemusical.com"]
                 ]
 
                 for (let i=0; i<shows.length; i++) {
                     let show = shows[i];
                     let parent = document.getElementById("shows");
-                    let button = document.createElement("card");    // Create card element for every item in the array
+                    let card = document.createElement("card");    // Create card element for every item in the array
+
+                    let anchor = document.createElement("a");
+                    anchor.setAttribute("href", show[2]);
+                    anchor.setAttribute("target", "_blank");
+
                     let text = document.createTextNode(show[0]);
+                    
                     let image = document.createElement("img");
                     image.setAttribute("src", static+show[1]);
-                    button.appendChild(image);
-                    button.appendChild(text);
-                    parent.appendChild(button);
+
+                    anchor.appendChild(image);
+                    anchor.appendChild(text);
+                    card.appendChild(anchor);
+                
+                    parent.appendChild(card);
                 }
 
             </script>
