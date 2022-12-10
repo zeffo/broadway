@@ -83,8 +83,8 @@
                     </button>
                 </a>
             </div>
-            <div class="col justify-center">
-                <img src="./static/images/frozen.jpg" id="home-image"> 
+            <div class="col justify-center" id="image-container">
+                <img id="home-image" class="fade-in"> 
             </div>
         </div> 
         
@@ -99,10 +99,12 @@
                     index = 0;
                 }
                 let image = document.getElementById("home-image");
-                image.setAttribute("src", static+images[index])
+                image.remove(); // Remove element from DOM
+                document.getElementById("image-container").appendChild(image); // Add it back to trigger the CSS keyframes
+                image.setAttribute("src", static+images[index]);
                 cursor = index;
             }
-
+            swapImage(); // set initial image
             setInterval("swapImage();", 5000);
         </script>
     </body>
