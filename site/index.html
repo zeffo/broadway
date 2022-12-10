@@ -86,6 +86,24 @@
             <div class="col justify-center">
                 <img src="./static/images/frozen.jpg" id="home-image"> 
             </div>
-        </div>        
+        </div> 
+        
+        <script>
+            const static = "./static/images/"
+            var images = ['aladdin.jpg', 'cursedchild.jpg', 'frozen.jpg', 'hadestown.jpg', 'hamilton.jpg', 'lionking.jpg', 'wicked.jpg'];
+            cursor = 0;
+
+            function swapImage () {
+                let index = cursor + 1
+                if (index == images.length) {
+                    index = 0;
+                }
+                let image = document.getElementById("home-image");
+                image.setAttribute("src", static+images[index])
+                cursor = index;
+            }
+
+            setInterval("swapImage();", 5000);
+        </script>
     </body>
 </html>
